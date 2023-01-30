@@ -6,7 +6,7 @@
           box-sizing: border-box;
 }
 
-body{
+body {
   font-family: 'Poppins', sans-serif;
   padding-bottom: 10rem;
 }
@@ -172,5 +172,111 @@ button {
     padding: .5rem 1.875rem;
     font-size: 0.875rem;
   }
+}
+
+.product-area {
+  margin-top: 3.5rem;
+}
+
+.product-area-title {
+  font-size: 3rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .product-area-title {
+    font-size: 2rem;
+  }
+}
+
+.product-area .product {
+  position: relative;
+  margin-bottom: 1rem;
+  border: 4px solid transparent;
+  border-radius: 0.875rem;
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
+}
+
+.product-area .product-image > img {
+  width: 100%;
+  border-radius: 0.625rem;
+}
+
+.product-area .product-hover {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#181813), color-stop(174.29%, rgba(24, 24, 19, 0)));
+  background: linear-gradient(0deg, #181813 0%, rgba(24, 24, 19, 0) 174.29%);
+  border-radius: 0px 0px 10px 10px;
+  padding: 1rem;
+  opacity: 0;
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
+}
+
+.product-area .product-hover .product-title {
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: 'Jacques Francois', serif;
+}
+
+.product-area .product-hover .product-price {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: 'Jacques Francois', serif;
+}
+
+.product-area .product-hover .btn-add-to-cart {
+  width: 2.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #FFB338;
+  border-radius: 30%;
+  border: 3px solid transparent;
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
+}
+
+.product-area .product-hover .btn-add-to-cart:focus {
+  border-color: #fff;
+}
+
+.product-area .product-hover .btn-add-to-cart > .fa-cart-shopping {
+  color: #fff;
+  pointer-events: none;
+}
+
+.product-area .product:hover {
+  border-color: #FFB338;
+}
+
+.product-area .product:hover .product-hover {
+  opacity: 1;
+}
+
+.offcanvas-header {
+  padding: 1.25rem;
+}
+
+.offcanvas-body {
+  padding: 0;
 }
 
